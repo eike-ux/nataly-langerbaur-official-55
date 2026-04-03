@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import FadeInSection from './FadeInSection';
 
 const achievementImages = Object.entries(
-  import.meta.glob('@/assets/achivementsImg/*.{png,jpg,jpeg,webp,svg}', {
+  import.meta.glob('../assets/achivementsImg/*.{png,jpg,jpeg,webp,svg}', {
     eager: true,
     import: 'default',
   }),
