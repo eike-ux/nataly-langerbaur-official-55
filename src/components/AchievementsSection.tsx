@@ -6,12 +6,13 @@ const achievementImages = Object.entries(
     eager: true,
     import: 'default',
   }),
-)
-  .sort(([a], [b]) => a.localeCompare(b))
-  .map(([, src]) => src as string);
+).reduce<Record<string, string>>((acc, [path, src]) => {
+  const filename = path.split('/').pop();
+  if (filename) acc[filename] = src as string;
+  return acc;
+}, {});
 
-const findAchievementImage = (filename: string) =>
-  achievementImages.find((src) => src.includes(filename));
+const findAchievementImage = (filename: string) => achievementImages[filename];
 
 const AchievementsSection = () => {
   const { t } = useLanguage();
