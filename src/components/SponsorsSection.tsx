@@ -1,12 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import FadeInSection from './FadeInSection';
+import primostarLogo from '@/assets/Primostar EST.png';
+import jivLogo from '@/assets/JIV.jpeg';
 
 // Easily editable sponsor data
 const sponsors = [
-  { name: 'Sponsor 1', logo: '', url: '#' },
-  { name: 'Sponsor 2', logo: '', url: '#' },
-  { name: 'Sponsor 3', logo: '', url: '#' },
-  { name: 'Sponsor 4', logo: '', url: '#' },
+  { name: 'Primostar', logo: primostarLogo, url: 'https://www.primostar.eu/et' },
+  { name: 'JIV', logo: jivLogo, url: 'https://jivsport.com' },
+
 ];
 
 const SponsorsSection = () => {
@@ -15,26 +16,26 @@ const SponsorsSection = () => {
   return (
     <section id="sponsors" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
-        <FadeInSection className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-foreground mb-4 tracking-wide">
+        <FadeInSection className="mb-16 text-center">
+          <h2 className="mb-4 font-serif text-3xl font-light tracking-wide text-foreground md:text-5xl">
             {t('sponsors.title')}
           </h2>
-          <div className="w-12 h-px bg-primary mx-auto" />
+          <div className="mx-auto h-px w-12 bg-primary" />
         </FadeInSection>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
+        <div className="mx-auto mb-16 grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-2">
           {sponsors.map((s, i) => (
             <FadeInSection key={i}>
               <a
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center h-24 bg-card rounded-lg border border-border hover:shadow-md hover:border-primary/30 transition-all duration-300 px-6"
+                className="flex h-40 items-center justify-center rounded-lg border border-border bg-card px-6 transition-all duration-300 hover:border-primary/30 hover:shadow-md"
               >
                 {s.logo ? (
-                  <img src={s.logo} alt={s.name} className="max-h-12 max-w-full object-contain" loading="lazy" />
+                  <img src={s.logo} alt={s.name} className="max-h-28 max-w-full object-contain" loading="lazy" />
                 ) : (
-                  <span className="font-sans text-sm text-muted-foreground tracking-wide">{s.name}</span>
+                  <span className="font-sans text-sm tracking-wide text-muted-foreground">{s.name}</span>
                 )}
               </a>
             </FadeInSection>
@@ -44,7 +45,7 @@ const SponsorsSection = () => {
         <FadeInSection className="text-center">
           <a
             href="#contact"
-            className="inline-block px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-full hover:bg-primary/90 transition-all duration-300"
+            className="inline-block rounded-full border border-background/80 bg-foreground px-8 py-3 font-sans text-sm uppercase tracking-widest text-background transition-all duration-300 hover:bg-foreground/90"
           >
             {t('sponsors.cta')}
           </a>

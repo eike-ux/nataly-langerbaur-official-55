@@ -22,32 +22,40 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-card/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        scrolled ? 'bg-card/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="font-serif text-xl font-semibold tracking-wide text-foreground">
           Nataly Langerbaur
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors duration-300 tracking-wide uppercase">
+            <a
+              key={l.href}
+              href={l.href}
+              className="font-sans text-sm uppercase tracking-wide text-muted-foreground transition-colors duration-300 hover:text-foreground"
+            >
               {l.label}
             </a>
           ))}
           <button
             onClick={() => setLang(lang === 'en' ? 'et' : 'en')}
-            className="ml-4 text-xs font-sans font-medium tracking-widest uppercase border border-border rounded-full px-3 py-1 text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-300"
+            className="ml-4 rounded-full border border-border px-3 py-1 font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground transition-all duration-300 hover:border-foreground hover:text-foreground"
           >
             {lang === 'en' ? 'ET' : 'EN'}
           </button>
         </div>
 
         {/* Mobile toggle */}
-        <div className="md:hidden flex items-center gap-3">
+        <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => setLang(lang === 'en' ? 'et' : 'en')}
-            className="text-xs font-sans font-medium tracking-widest uppercase border border-border rounded-full px-3 py-1 text-muted-foreground"
+            className="rounded-full border border-border px-3 py-1 font-sans text-xs font-medium uppercase tracking-widest text-muted-foreground"
           >
             {lang === 'en' ? 'ET' : 'EN'}
           </button>
@@ -61,10 +69,15 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border">
-          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
+        <div className="border-t border-border bg-card/95 backdrop-blur-md md:hidden">
+          <div className="container mx-auto flex flex-col gap-4 px-6 py-4">
             {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="text-sm font-sans text-muted-foreground hover:text-foreground tracking-wide uppercase">
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="font-sans text-sm uppercase tracking-wide text-muted-foreground hover:text-foreground"
+              >
                 {l.label}
               </a>
             ))}

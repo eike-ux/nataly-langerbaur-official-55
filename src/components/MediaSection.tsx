@@ -2,32 +2,32 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import FadeInSection from './FadeInSection';
 
 const videos = [
-  'https://www.youtube.com/embed/dQw4w9WgXcQ',
-  'https://www.youtube.com/embed/dQw4w9WgXcQ',
-  'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  'https://www.youtube.com/embed/ofBiS-9tT0Y?si=EbJou7Ml5qgwtZ-2',
+  'https://www.youtube.com/embed/Wjpa6oOl0Vo?si=LM629ms37vTd2IxX',
+  'https://www.youtube.com/embed/quXA7Zahu5I?si=hQR7t6Hn_zV_fQvu',
 ];
 
 const MediaSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="media" className="py-24 md:py-32 bg-ice">
+    <section id="media" className="bg-ice py-24 md:py-32">
       <div className="container mx-auto px-6">
-        <FadeInSection className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-foreground mb-4 tracking-wide">
+        <FadeInSection className="mb-16 text-center">
+          <h2 className="mb-4 font-serif text-3xl font-light tracking-wide text-foreground md:text-5xl">
             {t('media.title')}
           </h2>
-          <div className="w-12 h-px bg-primary mx-auto" />
+          <div className="mx-auto h-px w-12 bg-primary" />
         </FadeInSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
           {videos.map((url, i) => (
             <FadeInSection key={i}>
-              <div className="aspect-video rounded-lg overflow-hidden shadow-sm bg-card">
+              <div className="aspect-video overflow-hidden rounded-lg bg-card shadow-sm">
                 <iframe
                   src={url}
                   title={`Performance ${i + 1}`}
-                  className="w-full h-full"
+                  className="h-full w-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"

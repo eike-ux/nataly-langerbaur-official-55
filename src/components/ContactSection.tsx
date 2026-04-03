@@ -7,20 +7,20 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 md:py-32">
-      <div className="container mx-auto px-6 max-w-2xl text-center">
+      <div className="container mx-auto max-w-2xl px-6 text-center">
         <FadeInSection>
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-foreground mb-6 tracking-wide">
+          <h2 className="mb-6 font-serif text-3xl font-light tracking-wide text-foreground md:text-5xl">
             {t('contact.title')}
           </h2>
-          <div className="w-12 h-px bg-primary mx-auto mb-8" />
-          <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
+          <div className="mx-auto mb-8 h-px w-12 bg-primary" />
+          <p className="mb-10 font-sans text-base leading-relaxed text-muted-foreground md:text-lg">
             {t('contact.subtitle')}
           </p>
           <a
             href="mailto:info@natalylangerbaur.com"
-            className="inline-flex items-center gap-3 px-8 py-3 bg-primary text-primary-foreground font-sans text-sm tracking-widest uppercase rounded-full hover:bg-primary/90 transition-all duration-300"
+            className="inline-flex items-center gap-3 rounded-full border border-background/80 bg-foreground px-8 py-3 font-sans text-sm uppercase tracking-widest text-background transition-all duration-300 hover:bg-foreground/90"
           >
-            <Mail className="w-4 h-4" />
+            <Mail className="h-4 w-4" />
             {t('contact.email')}
           </a>
         </FadeInSection>

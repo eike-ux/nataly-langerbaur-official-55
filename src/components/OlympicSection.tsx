@@ -6,23 +6,23 @@ const OlympicSection = () => {
 
   return (
     <section id="olympic" className="py-24 md:py-32">
-      <div className="container mx-auto px-6 max-w-3xl text-center">
+      <div className="container mx-auto max-w-3xl px-6 text-center">
         <FadeInSection>
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-2 h-2 rounded-full bg-primary" />
-            <div className="w-2 h-2 rounded-full bg-gold" />
-            <div className="w-2 h-2 rounded-full bg-primary" />
-            <div className="w-2 h-2 rounded-full bg-gold" />
-            <div className="w-2 h-2 rounded-full bg-primary" />
+          <div className="mb-6 inline-flex items-center gap-2">
+            <div className="h-2 w-2 rounded-full bg-primary" />
+            <div className="h-2 w-2 rounded-full bg-gold" />
+            <div className="h-2 w-2 rounded-full bg-primary" />
+            <div className="h-2 w-2 rounded-full bg-gold" />
+            <div className="h-2 w-2 rounded-full bg-primary" />
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-light text-foreground mb-8 tracking-wide">
+          <h2 className="mb-8 font-serif text-3xl font-light tracking-wide text-foreground md:text-5xl">
             {t('olympic.title')}
           </h2>
-          <div className="w-12 h-px bg-primary mx-auto mb-10" />
-          <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+          <div className="mx-auto mb-10 h-px w-12 bg-primary" />
+          <p className="mb-6 font-sans text-base leading-relaxed text-muted-foreground md:text-lg">
             {t('olympic.p1')}
           </p>
-          <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed">
+          <p className="font-sans text-base leading-relaxed text-muted-foreground md:text-lg">
             {t('olympic.p2')}
           </p>
         </FadeInSection>

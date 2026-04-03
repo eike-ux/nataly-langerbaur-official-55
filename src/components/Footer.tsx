@@ -4,9 +4,9 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="py-8 border-t border-border">
+    <footer className="border-t border-border py-8">
       <div className="container mx-auto px-6 text-center">
-        <p className="font-sans text-xs text-muted-foreground tracking-wide">
+        <p className="font-sans text-xs tracking-wide text-muted-foreground">
           © {new Date().getFullYear()} Nataly Langerbaur. {t('footer.rights')}
         </p>
       </div>
