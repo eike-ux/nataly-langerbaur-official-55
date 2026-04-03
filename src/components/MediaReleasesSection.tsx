@@ -71,7 +71,7 @@ const MediaReleasesSection = () => {
                 )}
                 <span className="text-xs uppercase tracking-widest text-muted-foreground">{item.source}</span>
                 <h3 className="font-serif text-lg font-semibold text-foreground">{item.title}</h3>
-                <span className="mt-auto text-sm font-medium text-primary">Read</span>
+                <span className="mt-auto text-sm font-medium text-primary">{t('mediaReleases.read')}</span>
               </a>
             </FadeInSection>
           ))}

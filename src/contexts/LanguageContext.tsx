@@ -71,6 +71,7 @@ const translations: Record<string, Record<Lang, string>> = {
   // Media
   'media.title': { en: 'Videos', et: 'Videod' },
   'mediaReleases.title': { en: 'Media Releases', et: 'Meediakajastused' },
+  'mediaReleases.read': { en: 'Read', et: 'Loe lähemalt' },
 
   // Sponsors
   'sponsors.title': { en: 'Partners & Sponsors', et: 'Partnerid ja sponsorid' },
