@@ -17,7 +17,7 @@ const ContactSection = () => {
             {t('contact.subtitle')}
           </p>
           <a
-            href="mailto:info@natalylangerbaur.com"
+            href="mailto:eikelangerbaur@gmail.com"
             className="inline-flex items-center gap-3 rounded-full border border-background/80 bg-foreground px-8 py-3 font-sans text-sm uppercase tracking-widest text-background transition-all duration-300 hover:bg-foreground/90"
           >
             <Mail className="h-4 w-4" />
