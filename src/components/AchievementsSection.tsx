@@ -77,7 +77,7 @@ const AchievementsSection = () => {
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 justify-items-center sm:grid-cols-2 lg:grid-cols-4">
           {achievements.map((a, i) => (
             <FadeInSection key={i}>
-              <div className="flex h-full w-full max-w-[280px] flex-col items-center rounded-lg border border-border/70 bg-card/95 px-6 pb-8 pt-6 text-center shadow-sm transition-shadow duration-300 hover:shadow-md">
+              <div className="flex h-full min-h-[360px] w-full max-w-[280px] flex-col items-center rounded-lg border border-border/70 bg-card/95 px-6 pb-8 pt-6 text-center shadow-sm transition-shadow duration-300 hover:shadow-md">
                 {a.image ? (
                   <div className="mx-auto mb-4 h-44 w-44 overflow-hidden rounded-full border border-border bg-muted">
                     <img
@@ -92,7 +92,7 @@ const AchievementsSection = () => {
                   <div className="mx-auto mb-4 h-44 w-44 rounded-full border border-border bg-muted" />
                 )}
                 <h3 className="mb-2 font-serif text-lg font-semibold text-foreground">{a.title}</h3>
-                <p className="font-sans text-sm text-muted-foreground">{a.detail}</p>
+                <p className="min-h-[42px] font-sans text-sm text-muted-foreground">{a.detail}</p>
               </div>
             </FadeInSection>
           ))}
