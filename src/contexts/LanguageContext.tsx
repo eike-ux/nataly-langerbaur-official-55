@@ -20,7 +20,7 @@ const translations: Record<string, Record<Lang, string>> = {
   // Hero
   'hero.subtitle': {
     en: 'Estonian Figure Skater | World Championship Top 20 | Olympic Cycle Athlete',
-    et: 'Eesti iluuisutaja | MM Top 20 | Olümpiatsükli sportlane',
+    et: 'Eesti iluuisutaja | MM Top 20 | Tee olümpiale',
   },
   'hero.cta.partner': { en: 'Partner with Nataly', et: 'Hakka partneriks' },
   'hero.cta.achievements': { en: 'View Achievements', et: 'Vaata saavutusi' },
